@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------- 🎯 Estilos Globales -------------------- */
+body {
+  @apply font-sans text-text relative overflow-hidden min-h-screen;
+
+  /* 🎨 Fondo base neutro que combina con la red neuronal */
+  background: radial-gradient(circle at 25% 20%, #dfeef7 0%, transparent 60%),
+              radial-gradient(circle at 75% 90%, #cfdde6 0%, transparent 50%),
+              #eaf2f8;
+
+  animation: subtleBackgroundShift 20s ease-in-out infinite alternate;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------- 🎞️ Animación de fondo sutil -------------------- */
+@keyframes subtleBackgroundShift {
+  0% {
+    background-position: 25% 20%, 75% 90%;
+  }
+  100% {
+    background-position: 30% 25%, 70% 85%;
+  }
+}
